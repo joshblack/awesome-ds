@@ -48,6 +48,13 @@ A personal collection of resources, notes, and references for Design Systems
 
 ## Design Tokens
 
+## Components
+
+**Common issues**
+
+- When using a modal dialog, `<header>` and `<footer>` semantics are not stripped if the dialog is appended to the body
+- When using some form of pop-up, if it is positioned in DOM order it will be cut off if a parent has overflow hidden
+
 ## React
 
 ### Components
