@@ -43,9 +43,16 @@ ExampleComponent.defaultProps = {
 };
 ```
 
-When moving from `defaultProps` to default parameters, there is a change in the reference of a value. Specifically, with `defaultProps` values will have the same reference for complex types like functions, objects, arrays, etc. When used as a default parameter, however, these values will no longer have a stable reference as they are re-created each render.
+When moving from `defaultProps` to default parameters, there is a change in the
+reference of a value. Specifically, with `defaultProps` values will have the
+same reference for complex types like functions, objects, arrays, etc. When used
+as a default parameter, however, these values will no longer have a stable
+reference as they are re-created each render.
 
-Most of the time, this will not be an issue. However, if you are using these values in dependency arrays or notice components unnecessarily re-rendering when provided these values then you can move these values to the top-level scope to retain the same reference semantics as before.
+Most of the time, this will not be an issue. However, if you are using these
+values in dependency arrays or notice components unnecessarily re-rendering when
+provided these values then you can move these values to the top-level scope to
+retain the same reference semantics as before.
 
 ```sx
 const defaultOnChange = () => {};
