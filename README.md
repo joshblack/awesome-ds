@@ -8,6 +8,8 @@ A personal collection of resources, notes, and references for Design Systems
 ## Table of Contents
 
 - [React](#react)
+  - [Components](#components)
+    - [Stable default values](#stable-default-values)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <!-- prettier-ignore-end -->
@@ -38,7 +40,7 @@ ExampleComponent.defaultProps = {
   onChange: () => {},
   foo: {},
   bar: [],
-}
+};
 ```
 
 When moving from `defaultProps` to default parameters, there is a change in the reference of a value. Specifically, with `defaultProps` values will have the same reference for complex types like functions, objects, arrays, etc. When used as a default parameter, however, these values will no longer have a stable reference as they are re-created each render.
