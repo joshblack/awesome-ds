@@ -35,7 +35,7 @@ jobs:
             git config --global credential.helper 'cache --timeout=120'
             git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git config --global user.name "github-actions[bot]"
-            git remote set-url origin "https://github.com/joshblack/awesome-a11y.git"
+            git remote set-url origin "https://github.com/joshblack/awesome-ds.git"
             git checkout main
             git add -A
             git commit -m "chore(project): format files"
