@@ -12,8 +12,9 @@ A personal collection of resources, notes, and references for Design Systems
   - [Icons](#icons)
     - [Tooling](#tooling-1)
 - [Design Tokens](#design-tokens)
+- [Components](#components)
 - [React](#react)
-  - [Components](#components)
+  - [Components](#components-1)
     - [Stable prop callbacks](#stable-prop-callbacks)
     - [Stable default values](#stable-default-values)
   - [Hooks](#hooks)
@@ -52,8 +53,10 @@ A personal collection of resources, notes, and references for Design Systems
 
 **Common issues**
 
-- When using a modal dialog, `<header>` and `<footer>` semantics are not stripped if the dialog is appended to the body
-- When using some form of pop-up, if it is positioned in DOM order it will be cut off if a parent has overflow hidden
+- When using a modal dialog, `<header>` and `<footer>` semantics are not
+  stripped if the dialog is appended to the body
+- When using some form of pop-up, if it is positioned in DOM order it will be
+  cut off if a parent has overflow hidden
 
 ## React
 
