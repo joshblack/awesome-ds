@@ -183,7 +183,7 @@ function ExampleComponent({
 
 ### Hooks
 
-### Prefer accepting a `ref` instead of creating and returning one
+#### Prefer accepting a `ref` instead of creating and returning one
 
 <table>
 <thead><tr><th>Unpreferred</th><th>Preferred</th></tr></thead>
@@ -234,7 +234,7 @@ function MyComponent() {
 }
 ```
 
-### Using `useCallback` and `useMemo`
+#### Using `useCallback` and `useMemo`
 
 `useCallback` and `useMemo` can be incredibly useful tools in certain
 situations. In general, however, we try to avoid them unless one of the
