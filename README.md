@@ -11,6 +11,14 @@ A personal collection of resources, notes, and references for Design Systems
   - [Components](#components)
     - [Stable prop callbacks](#stable-prop-callbacks)
     - [Stable default values](#stable-default-values)
+  - [Hooks](#hooks)
+  - [Prefer accepting a `ref` instead of creating and returning one](#prefer-accepting-a-ref-instead-of-creating-and-returning-one)
+  - [Using `useCallback` and `useMemo`](#using-usecallback-and-usememo)
+  - [Refs](#refs)
+    - [Prefer using `useMergedRefs` when using `forwardRef`](#prefer-using-usemergedrefs-when-using-forwardref)
+  - [Recipes](#recipes)
+    - [`useMergedRefs`](#usemergedrefs)
+    - [`useStableCallback`](#usestablecallback)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <!-- prettier-ignore-end -->
@@ -206,8 +214,8 @@ This is important when a caller decides to use multiple hooks that rely on a
 
 ```jsx
 function MyComponent() {
-  const [ref1, isHovering] = useHover()
-  const [ref2, isDragging] = useDrag()
+  const [ref1, isHovering] = useHover();
+  const [ref2, isDragging] = useDrag();
 
   // How should the caller merge these two refs?
 }
@@ -218,9 +226,9 @@ If, instead, these hooks took in a `ref` we could have the caller manage the
 
 ```jsx
 function MyComponent() {
-  const ref = useRef(null)
-  const isHovering = useHover(ref)
-  const isDragging = useDrag(ref)
+  const ref = useRef(null);
+  const isHovering = useHover(ref);
+  const isDragging = useDrag(ref);
 
   // Caller has to add `ref` to a node below
 }
@@ -246,22 +254,22 @@ update frequently, then React will have to perform comparisons and re-run
 callback to `useCallback` and `useMemo`. This would be slower than creating a
 new function each render instead.
 
-
 ### Refs
 
 #### Prefer using `useMergedRefs` when using `forwardRef`
 
 ```jsx
-const ExampleComponent = React.forwardRef(
-  function ExampleComponent(props, forwardRef) {
-    const inputRef = React.useRef(null);
-    const ref = useMergedRefs(forwardRef, inputRef);
-    
-    // ...
-    
-    return <input ref={ref} type="text" />
-  }
-);
+const ExampleComponent = React.forwardRef(function ExampleComponent(
+  props,
+  forwardRef
+) {
+  const inputRef = React.useRef(null);
+  const ref = useMergedRefs(forwardRef, inputRef);
+
+  // ...
+
+  return <input ref={ref} type="text" />;
+});
 ```
 
 ### Recipes
@@ -297,11 +305,11 @@ import * as React from 'react';
 
 function useStableCallback(callback) {
   const ref = React.useRef(null);
-  
+
   React.useEffect(() => {
     ref.current = callback;
   });
-  
+
   return React.useCallback((...args) => {
     return ref.current?.(...args);
   }, []);
