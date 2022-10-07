@@ -172,3 +172,138 @@ function ExampleComponent({
   // ...
 }
 ```
+
+### Hooks
+
+### Prefer accepting a `ref` instead of creating and returning one
+
+<table>
+<thead><tr><th>Unpreferred</th><th>Preferred</th></tr></thead>
+<tbody>
+<tr><td>
+
+```scss
+const { ref } = useExample()
+```
+
+</td><td>
+
+```scss
+const ref = useRef(null);
+useExample(ref)
+```
+
+</td></tr>
+</tbody>
+</table>
+
+When designing hooks that require a reference to a DOM node (using a `ref`) you
+should design the hook to take in a `ref` as an argument instead of creating a
+`ref` on behalf of the caller.
+
+This is important when a caller decides to use multiple hooks that rely on a
+`ref`. For example,
+
+```jsx
+function MyComponent() {
+  const [ref1, isHovering] = useHover()
+  const [ref2, isDragging] = useDrag()
+
+  // How should the caller merge these two refs?
+}
+```
+
+If, instead, these hooks took in a `ref` we could have the caller manage the
+`ref` and pass it into the hooks.
+
+```jsx
+function MyComponent() {
+  const ref = useRef(null)
+  const isHovering = useHover(ref)
+  const isDragging = useDrag(ref)
+
+  // Caller has to add `ref` to a node below
+}
+```
+
+### Using `useCallback` and `useMemo`
+
+`useCallback` and `useMemo` can be incredibly useful tools in certain
+situations. In general, however, we try to avoid them unless one of the
+following conditions occur:
+
+- The identity of a function or object is required as a dependency in a
+  dependency array
+- We have observed performance issues due to allocations that can be reproduced
+  and resolved using these techniques
+
+This practice is to avoid introducing `useCallback` and `useMemo` prematurely,
+which can create extra work for our components to perform.
+
+A rule of thumb for this is to understand how frequently a dependency will
+update that is given to `useCallback` or `useMemo`. If a dependency is likely to
+update frequently, then React will have to perform comparisons and re-run
+callback to `useCallback` and `useMemo`. This would be slower than creating a
+new function each render instead.
+
+
+### Refs
+
+#### Prefer using `useMergedRefs` when using `forwardRef`
+
+```jsx
+const ExampleComponent = React.forwardRef(
+  function ExampleComponent(props, forwardRef) {
+    const inputRef = React.useRef(null);
+    const ref = useMergedRefs(forwardRef, inputRef);
+    
+    // ...
+    
+    return <input ref={ref} type="text" />
+  }
+);
+```
+
+### Recipes
+
+#### `useMergedRefs`
+
+```js
+import * as React from 'react';
+
+function useMergedRefs(...refs) {
+  return React.useCallback((node) => {
+    for (const ref of refs) {
+      if (!ref) {
+        continue;
+      }
+
+      if (typeof ref === 'function') {
+        ref(node);
+      } else if (typeof ref === 'object') {
+        ref.current = node;
+      }
+    }
+  }, []);
+}
+```
+
+#### `useStableCallback`
+
+aka `useSavedCallback`
+
+```js
+import * as React from 'react';
+
+function useStableCallback(callback) {
+  const ref = React.useRef(null);
+  
+  React.useEffect(() => {
+    ref.current = callback;
+  });
+  
+  return React.useCallback((...args) => {
+    return ref.current?.(...args);
+  }, []);
+}
+```
