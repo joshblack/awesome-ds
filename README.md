@@ -298,6 +298,34 @@ const ExampleComponent = React.forwardRef(function ExampleComponent(
 
 ### Recipes
 
+#### `useEvent`
+
+```js
+import * as React from 'react';
+
+function useEvent(elementOrRef, name, callback) {
+  const ref = React.useRef(null);
+  
+  React.useEffect(() => {
+    ref.current = callback;
+  });
+  
+  React.useEffect(() => {
+    const element = elementOrRef.current ?? elementOrRef;
+    
+    function listener(event) {
+      ref.current?.(event);
+    }
+    
+    element.addEventListener(name, listener);
+    
+    return () => {
+      element.removeEventListener(name, listener);
+    };
+  }, [elementOrRef, name]);
+}
+```
+
 #### `useMergedRefs`
 
 ```js
