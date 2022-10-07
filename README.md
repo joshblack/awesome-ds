@@ -23,6 +23,25 @@ A personal collection of resources, notes, and references for Design Systems
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <!-- prettier-ignore-end -->
 
+## Design Language
+
+**Areas**
+
+- Color scales
+- Typography
+- Motion
+- Spacing
+- Layout
+- Icons
+
+### Tooling
+
+### Icons
+
+#### Tooling
+
+## Design Tokens
+
 ## React
 
 ### Components
