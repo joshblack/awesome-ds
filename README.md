@@ -22,6 +22,7 @@ A personal collection of resources, notes, and references for Design Systems
   - [Refs](#refs)
     - [Prefer using `useMergedRefs` when using `forwardRef`](#prefer-using-usemergedrefs-when-using-forwardref)
   - [Recipes](#recipes)
+    - [`useEvent`](#useevent)
     - [`useMergedRefs`](#usemergedrefs)
     - [`useStableCallback`](#usestablecallback)
 
@@ -305,20 +306,20 @@ import * as React from 'react';
 
 function useEvent(elementOrRef, name, callback) {
   const ref = React.useRef(null);
-  
+
   React.useEffect(() => {
     ref.current = callback;
   });
-  
+
   React.useEffect(() => {
     const element = elementOrRef.current ?? elementOrRef;
-    
+
     function listener(event) {
       ref.current?.(event);
     }
-    
+
     element.addEventListener(name, listener);
-    
+
     return () => {
       element.removeEventListener(name, listener);
     };
