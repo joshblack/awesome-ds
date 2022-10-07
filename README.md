@@ -7,6 +7,11 @@ A personal collection of resources, notes, and references for Design Systems
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table of Contents
 
+- [Design Language](#design-language)
+  - [Tooling](#tooling)
+  - [Icons](#icons)
+    - [Tooling](#tooling-1)
+- [Design Tokens](#design-tokens)
 - [React](#react)
   - [Components](#components)
     - [Stable prop callbacks](#stable-prop-callbacks)
