@@ -17,6 +17,7 @@ A personal collection of resources, notes, and references for Design Systems
   - [Components](#components-1)
     - [Stable prop callbacks](#stable-prop-callbacks)
     - [Stable default values](#stable-default-values)
+    - [Working with timeouts](#working-with-timeouts)
   - [Hooks](#hooks)
     - [Prefer accepting a `ref` instead of creating and returning one](#prefer-accepting-a-ref-instead-of-creating-and-returning-one)
     - [Using `useCallback` and `useMemo`](#using-usecallback-and-usememo)
@@ -26,6 +27,7 @@ A personal collection of resources, notes, and references for Design Systems
     - [`useEvent`](#useevent)
     - [`useMergedRefs`](#usemergedrefs)
     - [`useStableCallback`](#usestablecallback)
+    - [`useTimeout`](#usetimeout)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <!-- prettier-ignore-end -->
@@ -218,7 +220,9 @@ function ExampleComponent({
 
 #### Working with timeouts
 
-Use a wrapper hook like [`useTimeout`](#usetimeout) when working with `setTimeout` inside of a component. This provides safety so that you can guarantee that no `setTimeout` function will run after a component unmounts.
+Use a wrapper hook like [`useTimeout`](#usetimeout) when working with
+`setTimeout` inside of a component. This provides safety so that you can
+guarantee that no `setTimeout` function will run after a component unmounts.
 
 ### Hooks
 
@@ -390,7 +394,7 @@ import * as React from 'react';
 
 export function useTimeout() {
   const timers = React.useRef(null);
-  
+
   if (timers.current === null) {
     timers.current = new Set();
   }
@@ -409,7 +413,7 @@ export function useTimeout() {
       fn();
       timers.current.delete(timeoutId);
     }, delayMs);
-    
+
     timers.current.add(timeoutId);
 
     return timeoutId;
