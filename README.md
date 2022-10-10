@@ -216,6 +216,10 @@ function ExampleComponent({
 }
 ```
 
+#### Working with timeouts
+
+Use a wrapper hook like [`useTimeout`](#usetimeout) when working with `setTimeout` inside of a component. This provides safety so that you can guarantee that no `setTimeout` function will run after a component unmounts.
+
 ### Hooks
 
 #### Prefer accepting a `ref` instead of creating and returning one
@@ -375,6 +379,40 @@ function useStableCallback(callback) {
 
   return React.useCallback((...args) => {
     return ref.current?.(...args);
+  }, []);
+}
+```
+
+#### `useTimeout`
+
+```js
+import * as React from 'react';
+
+export function useTimeout() {
+  const timers = React.useRef(null);
+  
+  if (timers.current === null) {
+    timers.current = new Set();
+  }
+
+  React.useEffect(() => {
+    return () => {
+      for (const id of timers.current) {
+        clearTimeout(id);
+      }
+      timers.current.clear();
+    };
+  }, []);
+
+  return React.useCallback((fn, delayMs) => {
+    const timeoutId = setTimeout(() => {
+      fn();
+      timers.current.delete(timeoutId);
+    }, delayMs);
+    
+    timers.current.add(timeoutId);
+
+    return timeoutId;
   }, []);
 }
 ```
