@@ -62,6 +62,24 @@ A personal collection of resources, notes, and references for Design Systems
 
 ## React
 
+### API Design
+
+#### Changes
+
+- Children
+  - Change from wrapping element to fragment
+  - Change from fragment to wrapping element
+- Props
+  - Add a prop
+  - Remove a prop
+  - Rename a prop
+  - Broaden the type of a prop
+  - Narrow the type of a prop
+- Ref
+  - Add a ref to a component
+  - Remove a ref from a component
+  - Move where a ref is placed within a component
+
 ### Components
 
 #### Stable prop callbacks
