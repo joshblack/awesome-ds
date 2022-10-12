@@ -87,25 +87,25 @@ A personal collection of resources, notes, and references for Design Systems
 
 #### Changes
 
-| Category | Situation | Semver |
-| :------- | :-------- | :----- |
-| Children | Change from a wrapping element to a fragment | |
-|  | Change from fragment to wrapping element | |
-|  | Change node type of wrapping element | |
-| Props | A prop is added | minor |
-|  | A prop is removed | major |
-|  | A prop is renamed (make sure to follow deprecation flow) | major |
-|  | The propType broadens or accepts more types | minor |
-|  | The propType narrows or accepts fewer types | major |
-| Refs | Add a ref to a component | minor |
-|  | Remove a ref from a component | major  |
-|  | Move where a ref is placed within a component |  |
-| Styles | A class name, style data attribute, etc is added | |
-|  | The position or display value of an element changes |  |
-| Types | A type is added | |
-| | The type is removed | |
-| | The type broadens or accepts more types | |
-| | The type narrows or accepts fewer types | |
+| Category | Situation                                                | Semver |
+| :------- | :------------------------------------------------------- | :----- |
+| Children | Change from a wrapping element to a fragment             |        |
+|          | Change from fragment to wrapping element                 |        |
+|          | Change node type of wrapping element                     |        |
+| Props    | A prop is added                                          | minor  |
+|          | A prop is removed                                        | major  |
+|          | A prop is renamed (make sure to follow deprecation flow) | major  |
+|          | The propType broadens or accepts more types              | minor  |
+|          | The propType narrows or accepts fewer types              | major  |
+| Refs     | Add a ref to a component                                 | minor  |
+|          | Remove a ref from a component                            | major  |
+|          | Move where a ref is placed within a component            |        |
+| Styles   | A class name, style data attribute, etc is added         |        |
+|          | The position or display value of an element changes      |        |
+| Types    | A type is added                                          |        |
+|          | The type is removed                                      |        |
+|          | The type broadens or accepts more types                  |        |
+|          | The type narrows or accepts fewer types                  |        |
 
 #### Questions
 
