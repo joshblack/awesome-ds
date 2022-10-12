@@ -66,6 +66,24 @@ A personal collection of resources, notes, and references for Design Systems
 
 ### API Design
 
+**Approaches**
+
+- Kitchen-sink
+  - Pros
+    - Easy to coordinate complex behavior
+    - Able to swap out implementation without breaking changes
+  - Cons
+    - Lack of flexibility
+- Structural
+  - Pros
+    - Maximum flexibility
+  - Cons
+    - Hard to build in behavior, requires orchestration
+- Layouts
+- Behavior
+- Styling
+- Async
+
 #### Changes
 
 - Children
@@ -81,6 +99,12 @@ A personal collection of resources, notes, and references for Design Systems
   - Add a ref to a component
   - Remove a ref from a component
   - Move where a ref is placed within a component
+
+#### Questions
+
+- When to add to a component versus creating a new component?
+  - If the props that are being added can exist independently, it might be useful to bake into an existing component
+  - If props being added are coupled, in other words they don't only exist for each other and specifying one without the other doesn't make sense, it might be worth exploring a new component that combines these concepts
 
 ### Components
 
