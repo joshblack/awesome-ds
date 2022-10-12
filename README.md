@@ -14,6 +14,8 @@ A personal collection of resources, notes, and references for Design Systems
 - [Design Tokens](#design-tokens)
 - [Components](#components)
 - [React](#react)
+  - [API Design](#api-design)
+    - [Changes](#changes)
   - [Components](#components-1)
     - [Stable prop callbacks](#stable-prop-callbacks)
     - [Stable default values](#stable-default-values)
