@@ -16,6 +16,7 @@ A personal collection of resources, notes, and references for Design Systems
 - [React](#react)
   - [API Design](#api-design)
     - [Changes](#changes)
+    - [Questions](#questions)
   - [Components](#components-1)
     - [Stable prop callbacks](#stable-prop-callbacks)
     - [Stable default values](#stable-default-values)
@@ -103,8 +104,11 @@ A personal collection of resources, notes, and references for Design Systems
 #### Questions
 
 - When to add to a component versus creating a new component?
-  - If the props that are being added can exist independently, it might be useful to bake into an existing component
-  - If props being added are coupled, in other words they don't only exist for each other and specifying one without the other doesn't make sense, it might be worth exploring a new component that combines these concepts
+  - If the props that are being added can exist independently, it might be
+    useful to bake into an existing component
+  - If props being added are coupled, in other words they don't only exist for
+    each other and specifying one without the other doesn't make sense, it might
+    be worth exploring a new component that combines these concepts
 
 ### Components
 
