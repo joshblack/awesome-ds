@@ -88,7 +88,8 @@ A personal collection of resources, notes, and references for Design Systems
 **Questions**
 
 - When do you add to a component versus create another component?
-  - Are you adding multiple props? Do they only work with each other and don't make sense without each other?
+  - Are you adding multiple props? Do they only work with each other and don't
+    make sense without each other?
 
 #### Changes
 
