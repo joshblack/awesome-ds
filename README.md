@@ -13,6 +13,7 @@ A personal collection of resources, notes, and references for Design Systems
     - [Tooling](#tooling-1)
 - [Design Tokens](#design-tokens)
 - [Components](#components)
+  - [Testing](#testing)
 - [React](#react)
   - [API Design](#api-design)
     - [Changes](#changes)
@@ -26,6 +27,7 @@ A personal collection of resources, notes, and references for Design Systems
     - [Using `useCallback` and `useMemo`](#using-usecallback-and-usememo)
   - [Refs](#refs)
     - [Prefer using `useMergedRefs` when using `forwardRef`](#prefer-using-usemergedrefs-when-using-forwardref)
+  - [Testing](#testing-1)
   - [Recipes](#recipes)
     - [`useEvent`](#useevent)
     - [`useMergedRefs`](#usemergedrefs)
@@ -62,7 +64,7 @@ A personal collection of resources, notes, and references for Design Systems
   stripped if the dialog is appended to the body
 - When using some form of pop-up, if it is positioned in DOM order it will be
   cut off if a parent has overflow hidden
-  
+
 ### Testing
 
 - Areas
