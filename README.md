@@ -62,6 +62,22 @@ A personal collection of resources, notes, and references for Design Systems
   stripped if the dialog is appended to the body
 - When using some form of pop-up, if it is positioned in DOM order it will be
   cut off if a parent has overflow hidden
+  
+### Testing
+
+- Areas
+  - Visual
+    - Visual Regression Testing
+  - Behavior
+    - User interactions
+    - States
+  - Accessibility
+    - Automated checks
+    - Manual checks
+  - Types
+    - Unknown type is not valid
+    - Types autocomplete correctly
+    - Types are sufficiently narrow
 
 ## React
 
@@ -374,6 +390,8 @@ const ExampleComponent = React.forwardRef(function ExampleComponent(
   return <input ref={ref} type="text" />;
 });
 ```
+
+### Testing
 
 ### Recipes
 
