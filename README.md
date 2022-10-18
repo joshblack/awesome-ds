@@ -65,6 +65,20 @@ A personal collection of resources, notes, and references for Design Systems
 - When using some form of pop-up, if it is positioned in DOM order it will be
   cut off if a parent has overflow hidden
 
+### Lifecycle
+
+- Unstable
+- Stable
+- Intermediate stages
+- Evolving a stable component
+  - Adding functionality
+  - Removing functionality
+    - Deprecation cycle
+      - Deprecate in current major release, notify of support policy
+      - Remove in either next release or n + 1 release
+  - Tools
+    - Codemods
+
 ### Testing
 
 - Areas
