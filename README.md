@@ -12,9 +12,12 @@ A personal collection of resources, notes, and references for Design Systems
   - [Icons](#icons)
     - [Tooling](#tooling-1)
 - [Design Tokens](#design-tokens)
+- [Theming](#theming)
 - [Components](#components)
   - [Lifecycle](#lifecycle)
   - [Testing](#testing)
+  - [Implementation](#implementation)
+    - [Persistence](#persistence)
 - [React](#react)
   - [API Design](#api-design)
     - [Changes](#changes)
@@ -63,7 +66,8 @@ A personal collection of resources, notes, and references for Design Systems
 
 - Light & Dark mode
   - Setting user preference
-    - Avoiding flash of theme switch if loading in via JavaScript (support SSR use-case)
+    - Avoiding flash of theme switch if loading in via JavaScript (support SSR
+      use-case)
   - Conditional rendering of items based on theme (illustrations)
 
 ## Components
