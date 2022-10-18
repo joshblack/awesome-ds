@@ -57,6 +57,15 @@ A personal collection of resources, notes, and references for Design Systems
 
 ## Design Tokens
 
+## Theming
+
+**Topics**
+
+- Light & Dark mode
+  - Setting user preference
+    - Avoiding flash of theme switch if loading in via JavaScript (support SSR use-case)
+  - Conditional rendering of items based on theme (illustrations)
+
 ## Components
 
 **Common issues**
@@ -95,6 +104,12 @@ A personal collection of resources, notes, and references for Design Systems
     - Unknown type is not valid
     - Types autocomplete correctly
     - Types are sufficiently narrow
+
+### Implementation
+
+#### Persistence
+
+- Local storage
 
 ## React
 
