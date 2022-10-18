@@ -37,6 +37,10 @@ A personal collection of resources, notes, and references for Design Systems
     - [`useMergedRefs`](#usemergedrefs)
     - [`useStableCallback`](#usestablecallback)
     - [`useTimeout`](#usetimeout)
+- [Community](#community)
+  - [Proposals](#proposals)
+  - [Support](#support)
+  - [Contribution](#contribution)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <!-- prettier-ignore-end -->
