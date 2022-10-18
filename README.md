@@ -164,6 +164,7 @@ A personal collection of resources, notes, and references for Design Systems
 |          | Move where a ref is placed within a component            |        |
 | Styles   | A class name, style data attribute, etc is added         |        |
 |          | The position or display value of an element changes      |        |
+|          | The position of a parent element changes (e.g. changes to `position: relative`      |        |
 | Types    | A type is added                                          |        |
 |          | The type is removed                                      |        |
 |          | The type broadens or accepts more types                  |        |
