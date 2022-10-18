@@ -534,3 +534,27 @@ export function useTimeout() {
   }, []);
 }
 ```
+
+## Community
+
+### Proposals
+
+### Support
+
+**Areas**
+
+- Slack
+- GitHub issues
+- GitHub discussions
+- Office hours
+- Design crits
+
+**SLA**
+
+- What level of support do you provide for teams?
+  - When can they expect to hear back from you when they make an issue?
+  - How long should they expect it take to address an issue?
+- How do teams stay engaged with updates?
+- What level of support should teams expect from contributions or proposals?
+
+### Contribution
