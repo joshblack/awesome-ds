@@ -13,6 +13,7 @@ A personal collection of resources, notes, and references for Design Systems
     - [Tooling](#tooling-1)
 - [Design Tokens](#design-tokens)
 - [Components](#components)
+  - [Lifecycle](#lifecycle)
   - [Testing](#testing)
 - [React](#react)
   - [API Design](#api-design)
