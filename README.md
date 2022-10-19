@@ -119,6 +119,25 @@ A personal collection of resources, notes, and references for Design Systems
 
 - Local storage
 
+## Styling
+
+**Approaches**
+
+- Native CSS
+- CSS Modules
+- Sass
+- CSS-in-JS
+  - https://vimeo.com/116209150?embedded=true&source=video_title&owner=24051491
+  - https://www.youtube.com/watch?v=9JZHodNR184
+
+**Topics**
+
+- Runtime vs zero runtime styling approaches
+
+**Techniques**
+
+- Linting for specific properties in style to make sure they come from design language or tokens
+
 ## React
 
 ### API Design
