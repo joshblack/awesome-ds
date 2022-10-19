@@ -18,6 +18,7 @@ A personal collection of resources, notes, and references for Design Systems
   - [Testing](#testing)
   - [Implementation](#implementation)
     - [Persistence](#persistence)
+- [Styling](#styling)
 - [React](#react)
   - [API Design](#api-design)
     - [Changes](#changes)
@@ -136,7 +137,8 @@ A personal collection of resources, notes, and references for Design Systems
 
 **Techniques**
 
-- Linting for specific properties in style to make sure they come from design language or tokens
+- Linting for specific properties in style to make sure they come from design
+  language or tokens
 
 ## React
 
