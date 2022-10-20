@@ -38,6 +38,8 @@ A personal collection of resources, notes, and references for Design Systems
     - [`useMergedRefs`](#usemergedrefs)
     - [`useStableCallback`](#usestablecallback)
     - [`useTimeout`](#usetimeout)
+- [Releases](#releases)
+  - [Packages](#packages)
 - [Community](#community)
   - [Proposals](#proposals)
   - [Support](#support)
