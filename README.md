@@ -561,6 +561,25 @@ export function useTimeout() {
 }
 ```
 
+## Releases
+
+### Packages
+
+- Release cadency
+  - Merge
+  - Time-based
+  - On-demand
+- Versioning
+  - Prerelease (0.x)
+  - Semver (1.x)
+- Multi-package vs single package
+- Bundling
+  - Side-effects
+  - `package.json` exports
+- Breaking changes
+  - Prerelease packages
+  - Separate changes into branch or feature flag
+
 ## Community
 
 ### Proposals
