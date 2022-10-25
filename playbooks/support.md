@@ -79,9 +79,8 @@ For questions, you will need to:
 
 ### FAQ
 
-- What should I do if I'm out-of-office on my support day?
-  If you're planning to take vacation time then you should pre-arrange with
-  someone on the team to cover you for your support day. If you're unable to
-  find someone, reach out to a manager who can help coordinate a replacement.
-  If you are taking a sick day, please reach out to a manager who can coordinate
-  a replacement on your behalf.
+- What should I do if I'm out-of-office on my support day? If you're planning to
+  take vacation time then you should pre-arrange with someone on the team to
+  cover you for your support day. If you're unable to find someone, reach out to
+  a manager who can help coordinate a replacement. If you are taking a sick day,
+  please reach out to a manager who can coordinate a replacement on your behalf.
