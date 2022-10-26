@@ -85,7 +85,8 @@ A personal collection of resources, notes, and references for Design Systems
   stripped if the dialog is appended to the body
 - When using some form of pop-up, if it is positioned in DOM order it will be
   cut off if a parent has overflow hidden
-- When using `localStorage`, it may be helpful to wrap calls to prevent errors if a user has this disabled in their browser
+- When using `localStorage`, it may be helpful to wrap calls to prevent errors
+  if a user has this disabled in their browser
 
 ### Lifecycle
 
