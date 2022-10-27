@@ -38,12 +38,19 @@ Squad leads have the following responsibilities:
 
 ### Time breakdown
 
-```markdown
+```
 ## 100% of time
 
-50% Squad goals (SG) 20% Support (S) 10% Personal Growth (PG) 20% Meetings (M)
+50% Business goals  (BG)
+20% Support         (S)
+10% Personal Growth (PG)
+20% Meetings        (M)
 
-40hr work week 20 / 8 / 4 / 8 SG S PG M
+40hr work week
+20 BG
+8  S
+4  PG
+8  M
 ```
 
 **Squad goals**
