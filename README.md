@@ -18,6 +18,7 @@ A personal collection of resources, notes, and references for Design Systems
   - [Testing](#testing)
   - [Implementation](#implementation)
     - [Persistence](#persistence)
+- [Layouts](#layouts)
 - [Styling](#styling)
 - [React](#react)
   - [API Design](#api-design)
@@ -126,16 +127,24 @@ A personal collection of resources, notes, and references for Design Systems
 
 ## Layouts
 
-Layouts in a design system define the common structure and presentation of your product. They create consistent and predictable structure to pages and foster cohesion across page and product boundaries.
+Layouts in a design system define the common structure and presentation of your
+product. They create consistent and predictable structure to pages and foster
+cohesion across page and product boundaries.
 
-Providing common layouts provide a way to quickly build pages with similar data requirements. Providing a foundational grid system allows any layout to feel like it belongs in the family of products even if it does not use a pre-defined layout.
+Providing common layouts provide a way to quickly build pages with similar data
+requirements. Providing a foundational grid system allows any layout to feel
+like it belongs in the family of products even if it does not use a pre-defined
+layout.
 
 Some great layouts and corresponding components to get started with include:
 
 - A general grid system, with Grid and Column components
   - Subgrid support is a plus
 - Vertical rhythm support through a Stack component
-- [Pancake](https://web.dev/one-line-layouts/#04-pancake-stack-grid-template-rows-auto-1fr-auto) and [Holy grail](https://web.dev/one-line-layouts/#05-classic-holy-grail-layout-grid-template-auto-1fr-auto-auto-1fr-auto) layouts
+- [Pancake](https://web.dev/one-line-layouts/#04-pancake-stack-grid-template-rows-auto-1fr-auto)
+  and
+  [Holy grail](https://web.dev/one-line-layouts/#05-classic-holy-grail-layout-grid-template-auto-1fr-auto-auto-1fr-auto)
+  layouts
 - Side-nav and panel placement layouts
 - Flex components that derive gap based on spacing system
 
