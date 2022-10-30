@@ -641,3 +641,29 @@ export function useTimeout() {
 - What level of support should teams expect from contributions or proposals?
 
 ### Contribution
+
+## Testing
+
+It's important to test the API and the implementation of what is delivered in a design system. Testing the API ensures that you're not accidentally shipping a breaking change to the code that you're shipping for developers to use. Testing the implementation makes sure that the appearance and behavior of the component does not change unexpected for end users (or for developers using the design system who may be relying on that behavior).
+
+It's also important to include certain structural and automated tests to make sure that the foundations of the design system (like tokens or the underlying design language or brand) setup teams for success by shipping accessible primitives.
+
+### Black box
+
+When considering how to test components or aspect of your design system, it is helpful to consider the overall interface and ways in which a developer or user interacts with your component. These different factors make up the overall contract of your component and should be what you prioritize in your testing strategy. In addition, it's helpful to frame tests from this "black box" model in order to allow you to make changes as needed to the internal structure of a component or module.
+
+As a rough guide, here are some things that are useful to incorporate into your testing strategy:
+
+- The API of your component, how does a developer use this in their project?
+- How does an end-user interact with this component?
+  - Make sure to consider mouse and keyboard and test with both
+  - If a specific role or `aria-*` property is necessary for a screen reader, make sure this is also tested
+- What is the expected visual appearance of this component across themes? (Visual Regression Testing)
+- Anything related to how your team defines semver that you want to make sure is captured (for example, changing the location of a `ref` if you're writing a React component)
+
+It is also helpful to include certain automated checks, like color contrast for design color tokens or automated accessibility checks, in your testing strategy.
+
+### Automated checks
+
+- Make sure all possible design color token combinations meet contrast requirements
+- Run an accessibility checker to catch common issues, axe or Accessibility Checker are great tools to get started
