@@ -160,6 +160,12 @@ Some great layouts and corresponding components to get started with include:
 
 - https://web.dev/one-line-layouts/
 - https://every-layout.dev/
+- https://ryanmulligan.dev/blog/layout-breakouts/
+- https://www.joshwcomeau.com/css/full-bleed/
+- Grid
+  - https://carbon-elements.netlify.app/grid/examples/css-grid/
+  - https://carbon-elements.netlify.app/grid/examples/preview/
+  - https://getbootstrap.com/docs/5.1/layout/css-grid/
 
 ## Styling
 
