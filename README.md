@@ -48,6 +48,7 @@ A personal collection of resources, notes, and references for Design Systems
 - [Testing](#testing-2)
   - [Black box](#black-box)
   - [Automated checks](#automated-checks)
+- [Links & Resources](#links--resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <!-- prettier-ignore-end -->
