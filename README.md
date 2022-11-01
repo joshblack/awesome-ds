@@ -698,3 +698,8 @@ design color tokens or automated accessibility checks, in your testing strategy.
   requirements
 - Run an accessibility checker to catch common issues, axe or Accessibility
   Checker are great tools to get started
+
+## Links & Resources
+
+- https://component.gallery/
+- https://designsystemsrepo.com/design-systems/
