@@ -532,7 +532,8 @@ you have two options for how to bind logic to these events:
     being called
 - Cons of returning a function
   - The caller is responsible for placing the function on the correct element
-  - Changing the event requires a breaking change (or an intermediate layer that obfuscates props)
+  - Changing the event requires a breaking change (or an intermediate layer that
+    obfuscates props)
 - Pros of accepting a `ref`
   - You can swap out the implementation or event without a Public API change
 - Cons of accepting a `ref`
