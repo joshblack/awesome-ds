@@ -483,6 +483,58 @@ update frequently, then React will have to perform comparisons and re-run
 callback to `useCallback` and `useMemo`. This would be slower than creating a
 new function each render instead.
 
+#### Prefer returning event handlers versus adding them
+
+When working with hooks that listen to events like `onKeyDown`, `onClick`, etc you have two options for how to bind logic to these events:
+
+- Return a function that the caller can attach to their component
+
+  ```jsx
+  function MyComponent() {
+    const { onKeyDown } = useCustomHook();
+    
+    return <CustomComponent onKeyDown={onKeyDown} />;
+  }
+  ```
+  
+- Accept a `ref` and call `addEventListener` in an effect
+
+  ```jsx
+  function MyComponent() {
+    const ref = React.useRef(null);
+
+    useCustomHook(ref);
+    
+    return <CustomComponent ref={ref} />;
+  }
+  
+  // useCustomHook.js
+  function useCustomHook(ref) {
+    React.useEffect(() => {
+      function listener(event) {
+        // ...
+      }
+      
+      const { current: node } = ref;
+      node.addEventListener('keydown', listener);
+      return () => {
+        node.removeEventListener('keydown', listener);
+      };
+    }, []);
+  }
+  ```
+  
+- Pros of returning a function
+  - The caller has control over when this behavior is applied
+  - It's clear, especially with multiple handlers for the same event, what is being called
+- Cons of returning a function
+  - The caller is responsible for placing the function on the correct element
+- Pros of accepting a `ref`
+- Cons of accepting a `ref`
+  - It's difficult to enable or disable this behavior due to conditional hooks (would likely need an option or flag passed to turn off)
+  - It can hide the fact that a keydown event is being registered on the element
+  - The caller is responsible for creating a ref and placing it on the correct element
+
 ### Refs
 
 #### Prefer using `useMergedRefs` when using `forwardRef`
