@@ -93,6 +93,7 @@ A personal collection of resources, notes, and references for Design Systems
   cut off if a parent has overflow hidden
 - When using `localStorage`, it may be helpful to wrap calls to prevent errors
   if a user has this disabled in their browser
+- When using a key event (like Escape, Home, PageUp, PageDown, Arrow keys) make sure to stop propagation and prevent default if you do not want a scroll to occur for some keys
 
 ### Lifecycle
 
