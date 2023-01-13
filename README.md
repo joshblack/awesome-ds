@@ -133,6 +133,45 @@ A personal collection of resources, notes, and references for Design Systems
 
 - Local storage
 
+### Hidden
+
+This component is useful to abstract the relationship between the visibility of a group of content and breakpoints for a Design System. It may also be helpful to provide this functionality through a custom hook, such as `useMedia`, `useBreakpoints`, etc.
+
+It's important that visibility as it relates to layout or content should be constrained to CSS. This minimizes layout shift if the page is Server-Side Rendered and avoids jumps of content becoming visible or hidden as JavaScript is loaded on the page.
+
+#### API Design
+
+```tsx
+function Example() {
+  return (
+    <>
+      <Hidden when="sm">
+        <SomeContent />
+      </Hidden>
+      <Hidden when={['sm', 'md']}>
+        <SomeContent />
+      </Hidden>
+      <Hidden above="sm">
+        <SomeContent />
+      </Hidden>
+      <Hidden below="sm">
+        <SomeContent />
+      </Hidden>
+      <Hidden breakpoint="sm">
+        <SomeContent />
+      </Hidden>
+    </>
+  );
+}
+```
+
+#### Links & Resources
+
+**Examples**
+
+- https://chakra-ui.com/docs/components/show-hide
+- https://mui.com/material-ui/api/hidden/
+
 ## Layouts
 
 Layouts in a design system define the common structure and presentation of your
