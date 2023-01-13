@@ -18,10 +18,13 @@ A personal collection of resources, notes, and references for Design Systems
   - [Testing](#testing)
   - [Implementation](#implementation)
     - [Persistence](#persistence)
+  - [Hidden](#hidden)
+    - [API Design](#api-design)
+    - [Links & Resources](#links--resources)
 - [Layouts](#layouts)
 - [Styling](#styling)
 - [React](#react)
-  - [API Design](#api-design)
+  - [API Design](#api-design-1)
     - [Changes](#changes)
     - [Questions](#questions)
   - [Components](#components-1)
@@ -49,7 +52,7 @@ A personal collection of resources, notes, and references for Design Systems
 - [Testing](#testing-2)
   - [Black box](#black-box)
   - [Automated checks](#automated-checks)
-- [Links & Resources](#links--resources)
+- [Links & Resources](#links--resources-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <!-- prettier-ignore-end -->
@@ -135,9 +138,15 @@ A personal collection of resources, notes, and references for Design Systems
 
 ### Hidden
 
-This component is useful to abstract the relationship between the visibility of a group of content and breakpoints for a Design System. It may also be helpful to provide this functionality through a custom hook, such as `useMedia`, `useBreakpoints`, etc.
+This component is useful to abstract the relationship between the visibility of
+a group of content and breakpoints for a Design System. It may also be helpful
+to provide this functionality through a custom hook, such as `useMedia`,
+`useBreakpoints`, etc.
 
-It's important that visibility as it relates to layout or content should be constrained to CSS. This minimizes layout shift if the page is Server-Side Rendered and avoids jumps of content becoming visible or hidden as JavaScript is loaded on the page.
+It's important that visibility as it relates to layout or content should be
+constrained to CSS. This minimizes layout shift if the page is Server-Side
+Rendered and avoids jumps of content becoming visible or hidden as JavaScript is
+loaded on the page.
 
 #### API Design
 
