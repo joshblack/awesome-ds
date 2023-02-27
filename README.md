@@ -52,6 +52,7 @@ A personal collection of resources, notes, and references for Design Systems
 - [Testing](#testing-2)
   - [Black box](#black-box)
   - [Automated checks](#automated-checks)
+- [Measuring Success](#measuring-success)
 - [Links & Resources](#links--resources-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -813,12 +814,16 @@ design color tokens or automated accessibility checks, in your testing strategy.
 
 ## Measuring Success
 
-- Metrics: what you can measure in order to drive insights and observe leading and lagging indicators
+- Metrics: what you can measure in order to drive insights and observe leading
+  and lagging indicators
   - Instance count of your components
   - Usage count of props for your components
-  - Number of lint overrides, escape hatches used when building a component (like custom styling)
+  - Number of lint overrides, escape hatches used when building a component
+    (like custom styling)
 - Research
-  - Complement metrics with user research/interviews in order to identify pain points, common user journeys, and ideas for future work that is important to the business
+  - Complement metrics with user research/interviews in order to identify pain
+    points, common user journeys, and ideas for future work that is important to
+    the business
 - As a library author[^lessons-learned-building-rust-libraries]
   - How successful all users are in using the API
   - The quality of the output that users achieve by using the API
@@ -831,4 +836,5 @@ design color tokens or automated accessibility checks, in your testing strategy.
 - https://component.gallery/
 - https://designsystemsrepo.com/design-systems/
 
-[^lessons-learned-building-rust-libraries]: https://fosdem.org/2023/schedule/event/rust_rust_api_design_learnings/
+[^lessons-learned-building-rust-libraries]:
+    https://fosdem.org/2023/schedule/event/rust_rust_api_design_learnings/
