@@ -830,6 +830,9 @@ design color tokens or automated accessibility checks, in your testing strategy.
   - The percentage of users making the correct choices
 - As an infrastructure team
 - From the business
+  - Does the company have a cohesive look and feel? (And why does this matter to your company?)
+  - How much work is shared across the company, and how quickly do updates permeate through the system (this measures how quickly can your company adapt or change)
+  - How quickly can product teams implement a feature, build out a product, etc. (how quickly can a team add value using company tools)
 
 ## Links & Resources
 
