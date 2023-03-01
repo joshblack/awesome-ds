@@ -838,6 +838,35 @@ design color tokens or automated accessibility checks, in your testing strategy.
   - How quickly can product teams implement a feature, build out a product, etc.
     (how quickly can a team add value using company tools)
 
+## Taxonomy
+
+Ways to classify different parts of your design system, often times this is helpful for components when you have multiple framework implementations or a decentralized system of systems.
+
+### Component
+
+```yml
+type: component
+name: string
+status: unstable | stable | ...
+implementation: react | rails | web-components | ...
+links:
+  - type: docs
+    title: Storybook
+    url: ...
+```
+
+### Icons
+
+```yml
+type: icon
+name: string
+aliases: []
+sizes: []
+categories: []
+deprecated: boolean
+reason: string
+```
+
 ## Links & Resources
 
 - https://component.gallery/
