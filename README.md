@@ -53,6 +53,9 @@ A personal collection of resources, notes, and references for Design Systems
   - [Black box](#black-box)
   - [Automated checks](#automated-checks)
 - [Measuring Success](#measuring-success)
+- [Taxonomy](#taxonomy)
+  - [Component](#component)
+  - [Icons](#icons-1)
 - [Links & Resources](#links--resources-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -840,7 +843,9 @@ design color tokens or automated accessibility checks, in your testing strategy.
 
 ## Taxonomy
 
-Ways to classify different parts of your design system, often times this is helpful for components when you have multiple framework implementations or a decentralized system of systems.
+Ways to classify different parts of your design system, often times this is
+helpful for components when you have multiple framework implementations or a
+decentralized system of systems.
 
 ### Component
 
