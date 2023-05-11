@@ -2,10 +2,8 @@
 
 <!-- This is an example of an issue used for tracking releases for libraries in a design system -->
 
-**Status:** Unreleased | Prerelease | Stable
-**Preview date:** TODO
-**Target date:** TODO
-**Changelog:**  TODO # Fill out after publishing a version
+**Status:** Unreleased | Prerelease | Stable **Preview date:** TODO **Target
+date:** TODO **Changelog:** TODO # Fill out after publishing a version
 
 ### Timeline
 
